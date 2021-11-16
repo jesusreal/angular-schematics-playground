@@ -11,28 +11,12 @@
       "additionalProperties": false,
       "properties": {
         "locale": {
-          "anyOf": [
-            {
-              "type": "string",
-              "title": "Single locale to use (besides the default)"
-            },
-            {
-              "type": "array",
-              "title": "Use all locales available"
-            }
-          ]
+          "type": "string",
+          "title": "Single locale to use (besides the default)"
         },
         "localeFile": {
-          "anyOf": [
-            {
-              "type": "string",
-              "title": "Single locale file matching the given locale"
-            },
-            {
-              "type": "array",
-              "title": "List of all locale files matching the locales"
-            }
-          ]
+          "type": "string",
+          "title": "Single locale file matching the given locale"
         }
       }
     }
