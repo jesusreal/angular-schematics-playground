@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "MyTestSchematicsSchema",
+  "title": "My test schematics Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "localize": {
+      "description": "Provide locale, localeFile to add it as an additional output of the application.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "locale": {
+          "anyOf": [
+            {
+              "type": "string",
+              "title": "Single locale to use (besides the default)"
+            },
+            {
+              "type": "array",
+              "title": "Use all locales available"
+            }
+          ]
+        },
+        "localeFile": {
+          "anyOf": [
+            {
+              "type": "string",
+              "title": "Single locale file matching the given locale"
+            },
+            {
+              "type": "array",
+              "title": "List of all locale files matching the locales"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
